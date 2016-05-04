@@ -26,6 +26,24 @@
     }
 }
 
+".okbutton": {
+    width: 50,
+    height: 50,
+    borderRadius: 0,
+    backgroundImage: '/images/buttons/greenbutton.png',
+    right: 15,
+    bottom: 5,
+    title: Alloy.Globals.fontMap.checkmark,
+    color: 'white',
+    selectedColor: 'green',
+    visible: false,
+    zIndex: 90,
+    font: {
+        fontSize: 14,
+        fontFamily: Alloy.Globals.webFont
+    }
+}
+
 ".main": {
     left: 5,
     right: 5,
@@ -68,7 +86,7 @@
     bottom: 75,
     left: 5,
     right: 5,
-    height: "50%",
+    height: 135,
     zIndex: 85
 }
 
@@ -98,4 +116,13 @@
     text: 'I',
     color: 'white',
     textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
+}
+
+"#textField": {
+    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+    color: "#336699",
+    top: 10,
+    left:10,
+    right: 10,
+    height: 60
 }

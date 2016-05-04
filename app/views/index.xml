@@ -18,7 +18,10 @@
         </View>
         <View id="overlay" class="overlay">
             <View id="inputForm" class="inputForm"/>
-            <View id="fields" class="fields"/>
+            <View id="fields" class="fields">
+                <TextField id="textField" onChange="onTextFieldChange" />
+                <Button id="okbutton" class="okbutton" onClick="onClick"/>
+            </View>
         </View>
         <Button id="button" class="button" onClick="onClick"/>
     </Window>

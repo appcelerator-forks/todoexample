@@ -1,4 +1,12 @@
 var overlayOpen = false;
+
+function onTextFieldChange() {
+    if ($.textField.value.length > 1) {
+        $.okbutton.show();
+    } else {
+        $.okbutton.hide();
+    }
+}
 function onClick() {
     overlayOpen = !overlayOpen;
     console.log("onClick: " + overlayOpen);
