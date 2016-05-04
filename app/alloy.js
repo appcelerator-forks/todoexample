@@ -14,5 +14,6 @@ var moment = require("alloy/moment"),
 
 require("acs");
 require("fonts");
+require("palette");
 Alloy.Collections.todoItems = Alloy.createCollection("todoItems");
 

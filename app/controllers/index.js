@@ -2,11 +2,14 @@ var overlayOpen = false;
 Alloy.Collections.todoItems.fetch();
 function doTransform(model) {
     "use strict";
-    var transform = model.toJSON();
+    var transform = model.toJSON(),
+        initial = transform.todoText.substring(0, 1).toUpperCase();
+        console.log(initial);
+        console.log(Alloy.Globals.palette);
     transform.template = "basic";
-    transform.bgColor = "blue";
+    transform.bgColor = Alloy.Globals.palette[initial];
     transform.selectionStyle = OS_IOS ? Ti.UI.iPhone.ListViewCellSelectionStyle.NONE : null;
-    transform.iconInitial = transform.todoText.substring(0, 1).toUpperCase();
+    transform.iconInitial = initial;
     transform.title = transform.todoText;
     return transform;
 
