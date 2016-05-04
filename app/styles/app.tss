@@ -24,3 +24,9 @@ overrode the settings with other TSS, XML, or JS settings:
 }
 
 */
+".h1": {
+    font: {fontSize: 20},
+    top: 15,
+    //left: 15,
+    color: "#264a60"
+}

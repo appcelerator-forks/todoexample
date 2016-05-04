@@ -42,3 +42,11 @@
     backgroundColor: 'white',
     zIndex: 0
 }
+
+"#list": {
+    top: 50
+}
+
+".basicItem": {
+    left: 10
+}

@@ -1,6 +1,20 @@
 <Alloy>
-	<Window id="container" class="container">
-	    <View id="main" class="main"/>
+    <Window id="container" class="container">
+        <View id="main" class="main">
+            <Label class="h1">Reminders</Label>
+            <ListView id="list" defaultItemTemplate="basic">
+                <Templates>
+                    <ItemTemplate name="basic">
+                        <Label class="basicItem" bindId="info" id="title"/>
+                    </ItemTemplate>
+                </Templates>
+                <ListSection>
+                    <ListItem info:text="List item 1"/>
+                    <ListItem info:text="List item 2"/>
+                    <ListItem info:text="List item 3"/>
+                </ListSection>
+            </ListView>
+        </View>
         <Button id="button" class="button"/>
-	</Window>
+    </Window>
 </Alloy>
