@@ -5,13 +5,14 @@
             <ListView id="list" defaultItemTemplate="basic">
                 <Templates>
                     <ItemTemplate name="basic">
+                        <Label bindId="icon" id="icon"/>
                         <Label class="basicItem" bindId="info" id="title"/>
                     </ItemTemplate>
                 </Templates>
                 <ListSection>
-                    <ListItem info:text="List item 1"/>
-                    <ListItem info:text="List item 2"/>
-                    <ListItem info:text="List item 3"/>
+                    <ListItem class="item" icon:backgroundColor="green" icon:text ="P" info:text="Phone Steve"/>
+                    <ListItem class="item" icon:backgroundColor="red" icon:text ="B" info:text="Book surfing lessons"/>
+                    <ListItem class="item" icon:backgroundColor="blue" icon:text ="P" info:text="Phone B&B"/>
                 </ListSection>
             </ListView>
         </View>
