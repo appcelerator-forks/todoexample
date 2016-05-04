@@ -1,0 +1,6 @@
+<Alloy>
+	<Window id="container" class="container">
+	    <View id="main" class="main"/>
+        <Button id="button" class="button"/>
+	</Window>
+</Alloy>

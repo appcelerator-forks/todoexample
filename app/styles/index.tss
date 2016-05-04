@@ -1,0 +1,44 @@
+".container": {
+	backgroundColor:"#264a60"
+}
+
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000"
+}
+
+"#label": {
+	font: {
+		fontSize: 12
+	}
+}
+
+".button": {
+    width: 50,
+    height: 50,
+    borderRadius: 0,
+    backgroundImage: '/images/buttons/redbutton.png',
+    right: 25,
+    bottom: 25,
+    title: Alloy.Globals.fontMap.plus,
+    color: 'white',
+    selectedColor: 'black',
+    zIndex: 90,
+    font: {
+        fontSize: 10,
+        fontFamily: Alloy.Globals.webFont
+    }
+}
+
+".main": {
+    left: 5,
+    right: 5,
+    top: 20,
+    bottom: 20,
+    borderRadius: 20,
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL,
+    backgroundColor: 'white',
+    zIndex: 0
+}
