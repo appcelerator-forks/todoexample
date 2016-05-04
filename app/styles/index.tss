@@ -8,11 +8,6 @@
 	color: "#000"
 }
 
-"#label": {
-	font: {
-		fontSize: 12
-	}
-}
 
 ".button": {
     width: 50,
@@ -41,6 +36,40 @@
     height: Ti.UI.FILL,
     backgroundColor: 'white',
     zIndex: 0
+}
+
+".overlay": {
+    left: 5,
+    right: 5,
+    bottom: 20,
+    borderRadius: 20,
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL,
+    backgroundColor: 'transparent',
+    zIndex: 0,
+    visible: false
+}
+
+".inputForm": {
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    borderRadius: 0,
+    width: Ti.UI.FILL,
+    height: Ti.UI.FILL,
+    backgroundColor: 'black',
+    zIndex: 80,
+    opacity: 0.5
+}
+
+".fields": {
+    backgroundColor: 'white',
+    bottom: 75,
+    left: 5,
+    right: 5,
+    height: "50%",
+    zIndex: 85
 }
 
 "#list": {

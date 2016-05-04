@@ -16,6 +16,10 @@
                 </ListSection>
             </ListView>
         </View>
+        <View id="overlay" class="overlay">
+            <View id="inputForm" class="inputForm"/>
+            <View id="fields" class="fields"/>
+        </View>
         <Button id="button" class="button" onClick="onClick"/>
     </Window>
 </Alloy>
