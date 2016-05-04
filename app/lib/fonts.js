@@ -1,4 +1,5 @@
 (function() {
+    "use strict";
     Alloy.Globals.fontMap = {
         "home": "\ue900",
         "pencil": "\ue901",
@@ -7,5 +8,5 @@
         "cross": "\ue904",
         "checkmark": "\ue905"
     };
-    Alloy.Globals.webFont = "icomoon"
+    Alloy.Globals.webFont = "icomoon";
 }());

@@ -1,11 +1,10 @@
+/* exported doTransform, onTextFieldChange, onOkClick, onClick, doPull, cleanUp*/
 var overlayOpen = false;
 Alloy.Collections.todoItems.fetch();
 function doTransform(model) {
     "use strict";
     var transform = model.toJSON(),
         initial = transform.todoText.substring(0, 1).toUpperCase();
-        console.log(initial);
-        console.log(Alloy.Globals.palette);
     transform.template = "basic";
     transform.bgColor = Alloy.Globals.palette[initial];
     transform.selectionStyle = OS_IOS ? Ti.UI.iPhone.ListViewCellSelectionStyle.NONE : null;
@@ -14,6 +13,14 @@ function doTransform(model) {
     return transform;
 
 }
+
+function updateUi() {
+    "use strict";
+    console.log("updateUi");
+    Alloy.Collections.todoItems.fetch();
+    updateListViewUi();
+}
+
 
 function onTextFieldChange() {
     "use strict";
@@ -25,8 +32,8 @@ function onTextFieldChange() {
 }
 
 function onOkClick() {
+    "use strict";
     var newItem,
-        obj = {},
         moment = require("alloy/moment");
     overlayOpen = !overlayOpen;
     newItem = Alloy.createModel("todoItems", {
@@ -52,12 +59,6 @@ function onClick() {
     }
 }
 
-function updateUi() {
-    "use strict";
-    console.log("updateUi");
-    Alloy.Collections.todoItems.fetch();
-    updateListViewUi();
-}
 
 function doPull() {
     "use strict";
@@ -66,6 +67,7 @@ function doPull() {
 }
 
 function cleanUp() {
+    "use strict";
     $.destroy();
 }
 

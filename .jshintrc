@@ -23,7 +23,8 @@
         "console": false,
         "process": false,
         "_": false,
-        "Backbone": false
+        "Backbone": false,
+        "updateListViewUi": false
     },
     "camelcase": false,
     "eqeqeq": true,

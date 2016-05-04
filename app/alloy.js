@@ -9,11 +9,7 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
-var moment = require("alloy/moment"),
-    item;
 
-require("acs");
 require("fonts");
 require("palette");
 Alloy.Collections.todoItems = Alloy.createCollection("todoItems");
-

@@ -26,7 +26,7 @@ exports.definition = {
                 return Backbone.Collection.prototype.fetch.call(this, options);
             }
             */
-           //note the negative to get reverse order - newest at top!
+            //note the negative to get reverse order - newest at top!
             comparator: function(item) {
                 return -item.get("creationDate");
             }
