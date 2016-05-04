@@ -16,6 +16,6 @@
                 </ListSection>
             </ListView>
         </View>
-        <Button id="button" class="button"/>
+        <Button id="button" class="button" onClick="onClick"/>
     </Window>
 </Alloy>

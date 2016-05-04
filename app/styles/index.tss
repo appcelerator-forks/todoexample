@@ -23,7 +23,7 @@
     bottom: 25,
     title: Alloy.Globals.fontMap.plus,
     color: 'white',
-    selectedColor: 'black',
+    selectedColor: 'red',
     zIndex: 90,
     font: {
         fontSize: 10,
