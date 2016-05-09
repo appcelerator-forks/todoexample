@@ -1,5 +1,6 @@
-/* exported doTransform, onTextFieldChange, onOkClick, onClick, doPull, cleanUp*/
-var overlayOpen = false;
+/* exported doTransform, onTextFieldChange, onOkClick, onClick, doPull, cleanUp, editList*/
+var overlayOpen = false,
+    editable = false;
 Alloy.Collections.todoItems.fetch();
 function doTransform(model) {
     "use strict";
@@ -10,8 +11,21 @@ function doTransform(model) {
     transform.selectionStyle = OS_IOS ? Ti.UI.iPhone.ListViewCellSelectionStyle.NONE : null;
     transform.iconInitial = initial;
     transform.title = transform.todoText;
+    transform.canEdit = true;
     return transform;
 
+}
+
+function editList() {
+    editable = !editable;
+    $.list.editing = editable;
+    if(editable) {
+        $.edit.title = "done";
+        $.button.hide();
+    } else {
+        $.edit.title = "edit";
+        $.button.show();
+    }
 }
 
 function updateUi() {

@@ -1,128 +1,119 @@
 ".container": {
-	backgroundColor:"#264a60"
-}
-
+	"backgroundColor": "#264a60"
+},
 "Label": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	color: "#000"
-}
+	"width": Ti.UI.SIZE,
+	"height": Ti.UI.SIZE,
+	"color": "#000"
+},
 
-
-".button": {
-    width: 50,
-    height: 50,
-    borderRadius: 0,
-    backgroundImage: '/images/buttons/redbutton.png',
-    right: 25,
-    bottom: 25,
-    title: Alloy.Globals.fontMap.plus,
-    color: 'white',
-    selectedColor: 'red',
-    zIndex: 90,
-    font: {
-        fontSize: 10,
-        fontFamily: Alloy.Globals.webFont
-    }
-}
-
-".okbutton": {
-    width: 50,
-    height: 50,
-    borderRadius: 0,
-    backgroundImage: '/images/buttons/greenbutton.png',
+".edit": {
+    top: 15,
     right: 15,
-    bottom: 5,
-    title: Alloy.Globals.fontMap.checkmark,
-    color: 'white',
-    selectedColor: 'green',
-    visible: false,
-    zIndex: 90,
-    font: {
-        fontSize: 14,
-        fontFamily: Alloy.Globals.webFont
-    }
+    width: 50
 }
-
+".button": {
+	"width": "50",
+	"height": "50",
+	"borderRadius": "0",
+	"backgroundImage": "/images/buttons/redbutton.png",
+	"right": "25",
+	"bottom": "25",
+	"title": "Alloy.Globals.fontMap.plus",
+	"color": "white",
+	"selectedColor": "red",
+	"zIndex": "90",
+	"font": {fontSize:10,fontFamily:Alloy.Globals.webFont}
+},
+".okbutton": {
+	"width": "50",
+	"height": "50",
+	"borderRadius": "0",
+	"backgroundImage": "/images/buttons/greenbutton.png",
+	"right": "15",
+	"bottom": "5",
+	"title": "Alloy.Globals.fontMap.checkmark",
+	"color": "white",
+	"selectedColor": "green",
+	"visible": "false",
+	"zIndex": "90",
+	"font": {fontSize:14,fontFamily:Alloy.Globals.webFont}
+},
 ".main": {
-    left: 5,
-    right: 5,
-    top: 20,
-    bottom: 20,
-    borderRadius: 20,
-    width: Ti.UI.FILL,
-    height: Ti.UI.FILL,
-    backgroundColor: 'white',
-    zIndex: 0
-}
-
+	"left": "5",
+	"right": "5",
+	"top": "20",
+	"bottom": "20",
+	"borderRadius": "20",
+	"width": Ti.UI.FILL,
+	"height": Ti.UI.FILL,
+	"backgroundColor": "white",
+	"zIndex": "0"
+},
 ".overlay": {
-    left: 5,
-    right: 5,
-    bottom: 20,
-    borderRadius: 20,
-    width: Ti.UI.FILL,
-    height: Ti.UI.FILL,
-    backgroundColor: 'transparent',
-    zIndex: 0,
-    visible: false
-}
-
+	"left": "5",
+	"right": "5",
+	"bottom": "20",
+	"borderRadius": "20",
+	"width": Ti.UI.FILL,
+	"height": Ti.UI.FILL,
+	"backgroundColor": "transparent",
+	"zIndex": "0",
+	"visible": "false"
+},
 ".inputForm": {
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    borderRadius: 0,
-    width: Ti.UI.FILL,
-    height: Ti.UI.FILL,
-    backgroundColor: 'black',
-    zIndex: 80,
-    opacity: 0.5
-}
-
+	"left": "0",
+	"right": "0",
+	"top": "0",
+	"bottom": "0",
+	"borderRadius": "0",
+	"width": Ti.UI.FILL,
+	"height": Ti.UI.FILL,
+	"backgroundColor": "black",
+	"zIndex": "80",
+	"opacity": "0.5"
+},
 ".fields": {
-    backgroundColor: 'white',
-    bottom: 75,
-    left: 5,
-    right: 5,
-    height: 135,
-    zIndex: 85
-}
-
+	"backgroundColor": "white",
+	"top": "100",
+	"left": "5",
+	"right": "5",
+	"height": "135",
+	"zIndex": "85"
+},
 "#list": {
-    top: 50
-}
-
+	"top": "50",
+	"editing": "false"
+},
 ".item[platform=ios]": {
-    selectionStyle: Ti.UI.iPhone.ListViewCellSelectionStyle.NONE
-}
-
+	"selectionStyle": Ti.UI.iPhone.ListViewCellSelectionStyle.NONE
+},
 ".item[platform=android]": {
-    selectionStyle: null
-}
-
+	"selectionStyle": "null"
+},
 ".basicItem": {
-    left: 40,
-    color: "#264a60"
-}
-
+	"left": "40",
+	"color": "#264a60"
+},
 "#icon": {
-    left: 10,
-    height: 20,
-    width: 20,
-    borderRadius: 10,
-    backgroundColor: 'red',
-    text: 'I',
-    color: 'white',
-    textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER
-}
-
+	"left": "10",
+	"height": "20",
+	"width": "20",
+	"borderRadius": "10",
+	"backgroundColor": "red",
+	"text": "I",
+	"color": "white",
+	"textAlign": "Titanium.UI.TEXT_ALIGNMENT_CENTER"
+},
 "#textField": {
-    borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
-    color: "#336699",
-    top: 10,
-    left:10,
-    right: 10,
-    height: 60
+	"borderStyle": Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
+	"color": "#336699",
+	"top": "10",
+	"left": "10",
+	"right": "10",
+	"height": "60"
+},
+"#inputForm": {
+},
+"#fields": {
 }
