@@ -4,6 +4,7 @@ var overlayOpen = false,
 Alloy.Collections.todoItems.fetch();
 function doTransform(model) {
     "use strict";
+    //console.log("*** doTransform");
     var transform = model.toJSON(),
         initial = transform.todoText.substring(0, 1).toUpperCase();
     transform.template = "basic";
@@ -19,7 +20,7 @@ function doTransform(model) {
 function editList() {
     editable = !editable;
     $.list.editing = editable;
-    if(editable) {
+    if (editable) {
         $.edit.title = "done";
         $.button.hide();
     } else {
@@ -35,7 +36,6 @@ function updateUi() {
     updateListViewUi();
 }
 
-
 function onTextFieldChange() {
     "use strict";
     if ($.textField.value.length > 1) {
@@ -50,6 +50,7 @@ function onOkClick() {
     var newItem,
         moment = require("alloy/moment");
     overlayOpen = !overlayOpen;
+    $.textField.blur();
     newItem = Alloy.createModel("todoItems", {
         creationDate : moment().valueOf(),
         todoText : $.textField.value
@@ -73,7 +74,6 @@ function onClick() {
     }
 }
 
-
 function doPull() {
     "use strict";
     console.log("doPull");
@@ -85,9 +85,49 @@ function cleanUp() {
     $.destroy();
 }
 
-Alloy.Collections.todoItems.on("change", function(){
+function deleteItem(e) {
     "use strict";
-    console.log("changed");
+    var section,
+        item,
+        model,
+        length;
+    e = e || {};
+    console.log("**** delete listener");
+    length = $.list.sections[e.sectionIndex].items.length;
+    section = $.list.sections[e.sectionIndex];
+    item = section.getItemAt(e.itemIndex);
+    console.log("item: " + JSON.stringify(item));
+    if (item && item.uuid && item.uuid.text) {
+        console.log(JSON.stringify(item.uuid.text));
+        model = Alloy.Collections.todoItems.get(item.uuid.text);
+        if (model) {
+            console.log(JSON.stringify(model));
+            Alloy.Collections.todoItems.remove(model);
+            model.destroy();
+        } else {
+            console.error("cannot delete model");
+        }
+
+    } else {
+        console.error("cannot retrieve id.  Length of view: " + length);
+    }
+}
+
+$.list.addEventListener("delete", deleteItem);
+
+$.list.addEventListener("itemclick", function(e){
+    console.log("itemclick");
+    console.log(JSON.stringify(e));
 });
 
+$.list.addEventListener("editaction", function(e) {
+    switch(e.action) {
+        case "DELETE":
+            deleteItem(e);
+            break;
+        default:
+            console.log("editactions: " + JSON.stringify(e));
+            break;
+    }
+});
 $.container.open();

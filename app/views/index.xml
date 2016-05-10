@@ -8,10 +8,11 @@
                     <ItemTemplate name="basic">
                         <Label bindId="icon" id="icon"/>
                         <Label bindId="info" class="basicItem" id="title"/>
+                        <Label bindId="uuid" class="uuid" id="uuid"/>
                     </ItemTemplate>
                 </Templates>
                 <ListSection dataCollection="todoItems" dataFunction="updateListViewUi" dataTransform="doTransform" id="section">
-                    <ListItem canEdit="true" icon:backgroundColor="{bgColor}" icon:text="{iconInitial}" info:text="{title}" template="{template}" touchEnabled="true"/>
+                    <ListItem class="item" canEdit="{canEdit}" icon:backgroundColor="{bgColor}" icon:text="{iconInitial}" info:text="{title}" template="{template}" touchEnabled="true" uuid:text="{id}"/>
                 </ListSection>
                 <PullView>
                     <View backgroundColor="black" height="50">

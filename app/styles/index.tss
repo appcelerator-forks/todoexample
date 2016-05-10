@@ -19,7 +19,7 @@
 	"backgroundImage": "/images/buttons/redbutton.png",
 	"right": "25",
 	"bottom": "25",
-	"title": "Alloy.Globals.fontMap.plus",
+	"title": Alloy.Globals.fontMap.plus,
 	"color": "white",
 	"selectedColor": "red",
 	"zIndex": "90",
@@ -32,7 +32,7 @@
 	"backgroundImage": "/images/buttons/greenbutton.png",
 	"right": "15",
 	"bottom": "5",
-	"title": "Alloy.Globals.fontMap.checkmark",
+	"title": Alloy.Globals.fontMap.checkmark,
 	"color": "white",
 	"selectedColor": "green",
 	"visible": "false",
@@ -86,7 +86,18 @@
 	"editing": "false"
 },
 ".item[platform=ios]": {
-	"selectionStyle": Ti.UI.iPhone.ListViewCellSelectionStyle.NONE
+	"selectionStyle": Ti.UI.iPhone.ListViewCellSelectionStyle.NONE,
+	"accessoryType": Titanium.UI.LIST_ACCESSORY_TYPE_DETAIL,
+	"editActions" : [{
+        "action": "deleteAction",
+        "style" : Titanium.UI.iOS.ROW_ACTION_STYLE_DESTRUCTIVE,
+        "title" : "DELETE"
+    }, {
+        "color": "blue",
+        "action": "editAction",
+        "style" : Titanium.UI.iOS.ROW_ACTION_STYLE_NORMAL,
+        "title" : "EDIT"
+    }]
 },
 ".item[platform=android]": {
 	"selectionStyle": "null"
@@ -95,6 +106,9 @@
 	"left": "40",
 	"color": "#264a60"
 },
+".uuid": {
+    visible: false
+}
 "#icon": {
 	"left": "10",
 	"height": "20",
