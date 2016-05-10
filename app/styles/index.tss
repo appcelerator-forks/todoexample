@@ -103,21 +103,21 @@
 	"selectionStyle": "null"
 },
 ".basicItem": {
-	"left": "40",
+	"left": "60",
 	"color": "#264a60"
 },
 ".uuid": {
     visible: false
 }
-"#icon": {
+".icon": {
 	"left": "10",
-	"height": "20",
-	"width": "20",
-	"borderRadius": "10",
+	"height": "30",
+	"width": "30",
+	"borderRadius": "15",
 	"backgroundColor": "red",
 	"text": "I",
 	"color": "white",
-	"textAlign": "Titanium.UI.TEXT_ALIGNMENT_CENTER"
+	"textAlign": Titanium.UI.TEXT_ALIGNMENT_CENTER
 },
 "#textField": {
 	"borderStyle": Ti.UI.INPUT_BORDERSTYLE_ROUNDED,

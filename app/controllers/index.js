@@ -13,6 +13,7 @@ function doTransform(model) {
     transform.iconInitial = initial;
     transform.title = transform.todoText;
     transform.canEdit = true;
+    transform.expanded = false;
     return transform;
 
 }
@@ -56,6 +57,7 @@ function onOkClick() {
         todoText : $.textField.value
     });
     newItem.save();
+    $.textField.value="";
     $.button.title = Alloy.Globals.fontMap.plus;
     $.overlay.hide();
     updateUi();
@@ -115,9 +117,15 @@ function deleteItem(e) {
 
 $.list.addEventListener("delete", deleteItem);
 
-$.list.addEventListener("itemclick", function(e){
-    console.log("itemclick");
-    console.log(JSON.stringify(e));
+$.list.addEventListener("itemclick", function(e) {
+    var item = e.section.getItemAt(e.itemIndex);
+    if (e.accessoryClicked) {
+        item.properties.height = 100;
+        e.section.updateItemAt(e.itemIndex, item);
+    } else {
+        console.log("itemclick; " + JSON.stringify(item.properties));
+    }
+
 });
 
 $.list.addEventListener("editaction", function(e) {
