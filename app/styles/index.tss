@@ -104,7 +104,8 @@
 },
 ".basicItem": {
 	"left": "60",
-	"color": "#264a60"
+	"color": "#264a60",
+	"height": 50
 },
 ".uuid": {
     visible: false

@@ -32,7 +32,7 @@ function editList() {
 
 function updateUi() {
     "use strict";
-    console.log("updateUi");
+    //console.log("updateUi");
     Alloy.Collections.todoItems.fetch();
     updateListViewUi();
 }
@@ -66,7 +66,7 @@ function onOkClick() {
 function onClick() {
     "use strict";
     overlayOpen = !overlayOpen;
-    console.log("onClick: " + overlayOpen);
+    //console.log("onClick: " + overlayOpen);
     if (overlayOpen) {
         $.button.title = Alloy.Globals.fontMap.cross;
         $.overlay.show();
@@ -118,9 +118,16 @@ function deleteItem(e) {
 $.list.addEventListener("delete", deleteItem);
 
 $.list.addEventListener("itemclick", function(e) {
-    var item = e.section.getItemAt(e.itemIndex);
+    var item = e.section.getItemAt(e.itemIndex),
+        height;
     if (e.accessoryClicked) {
-        item.properties.height = 100;
+        if (item.properties.expanded === true) {
+            height = 50;
+        } else {
+            height = 100;
+        }
+        item.properties.height = height;
+        item.properties.expanded = !item.properties.expanded;
         e.section.updateItemAt(e.itemIndex, item);
     } else {
         console.log("itemclick; " + JSON.stringify(item.properties));
