@@ -2,7 +2,7 @@
     <Window class="container" id="container" onClose="cleanUp">
         <View class="main" id="main">
             <Label class="h1">Reminders</Label>
-            <Button class="edit" id="edit" onClick="editList">edit</Button>
+            <Button class="edit" id="edit" onClick="editList" platform="ios">edit</Button>
             <ListView defaultItemTemplate="basic" id="list" onPull="doPull">
                 <Templates>
                     <ItemTemplate name="basic">
@@ -12,7 +12,7 @@
                     </ItemTemplate>
                 </Templates>
                 <ListSection dataCollection="todoItems" dataFunction="updateListViewUi" dataTransform="doTransform" id="section">
-                    <ListItem expanded="{expanded}" class="item" canEdit="{canEdit}" icon:backgroundColor="{bgColor}" icon:text="{iconInitial}" info:text="{title}" template="{template}" touchEnabled="true" uuid:text="{id}"/>
+                    <ListItem canEdit="{canEdit}" class="item" expanded="{expanded}" icon:backgroundColor="{bgColor}" icon:text="{iconInitial}" info:text="{title}" template="{template}" touchEnabled="true" uuid:text="{id}"/>
                 </ListSection>
                 <PullView>
                     <View backgroundColor="black" height="50">

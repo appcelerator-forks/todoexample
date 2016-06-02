@@ -6,12 +6,11 @@
 	"height": Ti.UI.SIZE,
 	"color": "#000"
 },
-
 ".edit": {
-    top: 15,
-    right: 15,
-    width: 50
-}
+	"top": "15",
+	"right": "15",
+	"width": "50"
+},
 ".button": {
 	"width": "50",
 	"height": "50",
@@ -88,16 +87,7 @@
 ".item[platform=ios]": {
 	"selectionStyle": Ti.UI.iPhone.ListViewCellSelectionStyle.NONE,
 	"accessoryType": Titanium.UI.LIST_ACCESSORY_TYPE_DETAIL,
-	"editActions" : [{
-        "action": "deleteAction",
-        "style" : Titanium.UI.iOS.ROW_ACTION_STYLE_DESTRUCTIVE,
-        "title" : "DELETE"
-    }, {
-        "color": "blue",
-        "action": "editAction",
-        "style" : Titanium.UI.iOS.ROW_ACTION_STYLE_NORMAL,
-        "title" : "EDIT"
-    }]
+	"editActions": [{"action":"deleteAction","style":Titanium.UI.iOS.ROW_ACTION_STYLE_DESTRUCTIVE,"title":"DELETE"},{"color":"blue","action":"editAction","style":Titanium.UI.iOS.ROW_ACTION_STYLE_NORMAL,"title":"EDIT"}]
 },
 ".item[platform=android]": {
 	"selectionStyle": "null"
@@ -105,11 +95,11 @@
 ".basicItem": {
 	"left": "60",
 	"color": "#264a60",
-	"height": 50
+	"height": "50"
 },
 ".uuid": {
-    visible: false
-}
+	"visible": "false"
+},
 ".icon": {
 	"left": "10",
 	"height": "30",

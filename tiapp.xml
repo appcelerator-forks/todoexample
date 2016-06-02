@@ -1,82 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <id>com.stepupapps.todoexample</id>
-    <name>ToDo</name>
-    <version>1.0</version>
-    <publisher>not specified</publisher>
-    <url>unspecified</url>
-    <description>not specified</description>
-    <copyright>not specified</copyright>
-    <icon>appicon.png</icon>
-    <fullscreen>false</fullscreen>
-    <navbar-hidden>false</navbar-hidden>
-    <analytics>true</analytics>
-    <guid>b369a53f-c83e-4ab3-9000-030db2dab526</guid>
-    <property name="ti.ui.defaultunit" type="string">dp</property>
-    <ios>
-        <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
-        <plist>
-            <dict>
-                <key>UISupportedInterfaceOrientations~iphone</key>
-                <array>
-                    <string>UIInterfaceOrientationPortrait</string>
-                </array>
-                <key>UISupportedInterfaceOrientations~ipad</key>
-                <array>
-                    <string>UIInterfaceOrientationPortrait</string>
-                    <string>UIInterfaceOrientationPortraitUpsideDown</string>
-                    <string>UIInterfaceOrientationLandscapeLeft</string>
-                    <string>UIInterfaceOrientationLandscapeRight</string>
-                </array>
-                <key>UIRequiresPersistentWiFi</key>
-                <false/>
-                <key>UIPrerenderedIcon</key>
-                <false/>
-                <key>UIStatusBarHidden</key>
-                <false/>
-                <key>UIStatusBarStyle</key>
-                <string>UIStatusBarStyleLightContent</string>
-            </dict>
-        </plist>
-    </ios>
-    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
-    <mobileweb>
-        <precache/>
-        <splash>
-            <enabled>true</enabled>
-            <inline-css-images>true</inline-css-images>
-        </splash>
-        <theme>default</theme>
-    </mobileweb>
-    <modules>
-        <module platform="commonjs">ti.cloud</module>
-    </modules>
-    <deployment-targets>
-        <target device="android">true</target>
-        <target device="ipad">true</target>
-        <target device="iphone">true</target>
-        <target device="mobileweb">false</target>
-        <target device="windows">true</target>
-    </deployment-targets>
-    <sdk-version>5.2.2.GA</sdk-version>
-    <plugins>
-        <plugin version="1.0">ti.alloy</plugin>
-    </plugins>
-    <property name="appc-app-id" type="string">5729bcd457799d3517cb0c67</property>
-    <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
-    <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
-    <property name="acs-oauth-secret-development" type="string">2iD36ABqBWuA60RqBew66NnWV5mhryBr</property>
-    <property name="acs-oauth-key-development" type="string">mXhCYnzFPwvb3OO64Ix2moFgjSnWjnB5</property>
-    <property name="acs-api-key-development" type="string">S9jhC1tRWm2t9RsPzk2NWqm7TCM9TRWx</property>
-    <property name="acs-username-development" type="string">appc_app_user_dev</property>
-    <property name="acs-password-development" type="string">72XRfZHjRt1EyuLx2S</property>
-    <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
-    <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
-    <property name="acs-oauth-secret-production" type="string">UMumrknQR9DsdIFK3DHqMpAADh2MkvyW</property>
-    <property name="acs-oauth-key-production" type="string">zMpIpLvVZghyDoJPnZjIVH0rwMMzFuPC</property>
-    <property name="acs-api-key-production" type="string">Reeq91t4AF9YMLtwrmA6eAkC7DwF24FF</property>
-    <property name="acs-username-production" type="string">appc_app_user</property>
-    <property name="acs-password-production" type="string">5C4i9KdfNBAqs9rFyP</property>
-    <property name="appc-org-id" type="string">100003145</property>
-    <property name="appc-creator-user-id" type="string">0f53dd3212ae7e7683190c619a04b69c</property>
+  <id>com.stepupapps.todoexample</id>
+  <name>ToDo</name>
+  <version>1.0</version>
+  <publisher>not specified</publisher>
+  <url>unspecified</url>
+  <description>not specified</description>
+  <copyright>not specified</copyright>
+  <icon>appicon.png</icon>
+  <fullscreen>false</fullscreen>
+  <navbar-hidden>false</navbar-hidden>
+  <analytics>true</analytics>
+  <guid>b369a53f-c83e-4ab3-9000-030db2dab526</guid>
+  <property name="ti.ui.defaultunit" type="string">dp</property>
+  <ios>
+    <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+    <plist>
+      <dict>
+        <key>UISupportedInterfaceOrientations~iphone</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationPortraitUpsideDown</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        <key>UIRequiresPersistentWiFi</key>
+        <false/>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+        <key>UIStatusBarHidden</key>
+        <false/>
+        <key>UIStatusBarStyle</key>
+        <string>UIStatusBarStyleLightContent</string>
+      </dict>
+    </plist>
+  </ios>
+  <android xmlns:android="http://schemas.android.com/apk/res/android">
+    <manifest android:versionCode="1" android:versionName="1.0" package="com.stepupapps.todoexample" xmlns:android="http://schemas.android.com/apk/res/android">
+      <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="23"/>
+      <application
+            android:debuggable="true"
+            android:icon="@drawable/appicon"
+            android:label="ToDo"
+            android:name="TodoApplication"
+            android:theme="@style/Theme.AppCompat.NoTitleBar">
+        <activity
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:name=".TodoActivity"
+            android:theme="@style/Theme.Titanium">
+          <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+          </intent-filter>
+        </activity>
+        <activity
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:name="org.appcelerator.titanium.TiActivity"/>
+        <activity
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:name="org.appcelerator.titanium.TiTranslucentActivity"
+            android:theme="@style/Theme.AppCompat.Translucent"/>
+        <activity android:configChanges="screenSize" android:name="ti.modules.titanium.ui.android.TiPreferencesActivity"/>
+        <service android:exported="false" android:name="com.appcelerator.analytics.APSAnalyticsService"/>
+      </application>
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    </manifest>
+  </android>
+  <mobileweb>
+    <precache/>
+    <splash>
+      <enabled>true</enabled>
+      <inline-css-images>true</inline-css-images>
+    </splash>
+    <theme>default</theme>
+  </mobileweb>
+  <modules>
+    <module platform="commonjs">ti.cloud</module>
+  </modules>
+  <deployment-targets>
+    <target device="android">true</target>
+    <target device="ipad">true</target>
+    <target device="iphone">true</target>
+    <target device="mobileweb">false</target>
+    <target device="windows">true</target>
+  </deployment-targets>
+  <sdk-version>5.2.2.GA</sdk-version>
+  <plugins>
+    <plugin version="1.0">ti.alloy</plugin>
+  </plugins>
+  <property name="appc-app-id" type="string">5729bcd457799d3517cb0c67</property>
+  <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
+  <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
+  <property name="acs-oauth-secret-development" type="string">2iD36ABqBWuA60RqBew66NnWV5mhryBr</property>
+  <property name="acs-oauth-key-development" type="string">mXhCYnzFPwvb3OO64Ix2moFgjSnWjnB5</property>
+  <property name="acs-api-key-development" type="string">S9jhC1tRWm2t9RsPzk2NWqm7TCM9TRWx</property>
+  <property name="acs-username-development" type="string">appc_app_user_dev</property>
+  <property name="acs-password-development" type="string">72XRfZHjRt1EyuLx2S</property>
+  <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
+  <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
+  <property name="acs-oauth-secret-production" type="string">UMumrknQR9DsdIFK3DHqMpAADh2MkvyW</property>
+  <property name="acs-oauth-key-production" type="string">zMpIpLvVZghyDoJPnZjIVH0rwMMzFuPC</property>
+  <property name="acs-api-key-production" type="string">Reeq91t4AF9YMLtwrmA6eAkC7DwF24FF</property>
+  <property name="acs-username-production" type="string">appc_app_user</property>
+  <property name="acs-password-production" type="string">5C4i9KdfNBAqs9rFyP</property>
+  <property name="appc-org-id" type="string">100003145</property>
+  <property name="appc-creator-user-id" type="string">0f53dd3212ae7e7683190c619a04b69c</property>
 </ti:app>
