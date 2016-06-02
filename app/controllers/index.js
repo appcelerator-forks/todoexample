@@ -58,7 +58,7 @@ function onOkClick() {
     });
     newItem.save();
     $.textField.value="";
-    $.button.title = Alloy.Globals.fontMap.plus;
+    $.button.title = "";
     $.overlay.hide();
     updateUi();
 }
@@ -68,10 +68,10 @@ function onClick() {
     overlayOpen = !overlayOpen;
     //console.log("onClick: " + overlayOpen);
     if (overlayOpen) {
-        $.button.title = Alloy.Globals.fontMap.cross;
+        $.button.title = "";
         $.overlay.show();
     } else {
-        $.button.title = Alloy.Globals.fontMap.plus;
+        $.button.title = "";
         $.overlay.hide();
     }
 }
