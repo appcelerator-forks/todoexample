@@ -28,15 +28,15 @@
 	"width": "50",
 	"height": "50",
 	"borderRadius": "0",
-	"backgroundImage": "/images/buttons/greenbutton.png",
+	"backgroundImage": "/images/buttons/confirmButton.png",
 	"right": "5",
 	"top": "5",
-	"title": Alloy.Globals.fontMap.checkmark,
+	"title": "",
 	"color": "white",
 	"selectedColor": "green",
 	"visible": "false",
 	"zIndex": "90",
-	"font": {fontSize:14,fontFamily:Alloy.Globals.webFont}
+	"font": {fontSize:14}
 },
 ".main": {
 	"left": "5",
@@ -70,7 +70,7 @@
 	"zIndex": "85"
 },
 "#list": {
-	"top": "100",
+	"top": "110",
 	"editing": "false"
 },
 ".item[platform=ios]": {
@@ -82,14 +82,17 @@
 	"selectionStyle": "null"
 },
 ".basicItem": {
+    "top": 5,
 	"left": "60",
 	"color": "#264a60",
-	"height": "50"
+	"height": "30",
+    "verticalAlign": Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER
 },
 ".uuid": {
 	"visible": "false"
 },
 ".icon": {
+    "top": 5,
 	"left": "10",
 	"height": "30",
 	"width": "30",

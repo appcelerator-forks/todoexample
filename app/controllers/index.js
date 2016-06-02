@@ -1,10 +1,8 @@
 /* exported doTransform, onTextFieldChange, onOkClick, onClick, doPull, cleanUp, editList*/
-var overlayOpen = false,
-    editable = false;
+var editable = false;
 Alloy.Collections.todoItems.fetch();
 function doTransform(model) {
     "use strict";
-    //console.log("*** doTransform");
     var transform = model.toJSON(),
         initial = transform.todoText.substring(0, 1).toUpperCase();
     transform.template = "basic";
@@ -19,6 +17,7 @@ function doTransform(model) {
 }
 
 function editList() {
+    "use strict";
     editable = !editable;
     $.list.editing = editable;
     if (editable) {
@@ -48,22 +47,17 @@ function onOkClick() {
     "use strict";
     var newItem,
         moment = require("alloy/moment");
-    overlayOpen = !overlayOpen;
+    if ($.textField.value.length > 1) {
+        newItem = Alloy.createModel("todoItems", {
+            creationDate : moment().valueOf(),
+            todoText : $.textField.value
+        });
+        newItem.save();
+        updateUi();
+    }
     $.textField.blur();
-    newItem = Alloy.createModel("todoItems", {
-        creationDate : moment().valueOf(),
-        todoText : $.textField.value
-    });
-    newItem.save();
-    $.textField.value = "";
     $.okbutton.hide();
-    updateUi();
-}
-
-function doPull() {
-    "use strict";
-    console.log("doPull");
-    updateUi();
+    $.textField.value = "";
 }
 
 function cleanUp() {
@@ -102,6 +96,7 @@ function deleteItem(e) {
 $.list.addEventListener("delete", deleteItem);
 
 $.list.addEventListener("itemclick", function(e) {
+    "use strict";
     var item = e.section.getItemAt(e.itemIndex),
         height;
     if (e.accessoryClicked) {
@@ -120,6 +115,7 @@ $.list.addEventListener("itemclick", function(e) {
 });
 
 $.list.addEventListener("editaction", function(e) {
+    "use strict";
     switch(e.action) {
         case "DELETE":
             deleteItem(e);
