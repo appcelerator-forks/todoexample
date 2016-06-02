@@ -30,7 +30,7 @@
 	"borderRadius": "0",
 	"backgroundImage": "/images/buttons/greenbutton.png",
 	"right": "5",
-	"top": "15",
+	"top": "5",
 	"title": Alloy.Globals.fontMap.checkmark,
 	"color": "white",
 	"selectedColor": "green",
@@ -60,28 +60,17 @@
 	"zIndex": "0",
 	"visible": "false"
 },
-".inputForm": {
-	"left": "0",
-	"right": "0",
-	"top": "0",
-	"bottom": "0",
-	"borderRadius": "0",
-	"width": Ti.UI.FILL,
-	"height": Ti.UI.FILL,
-	"backgroundColor": "black",
-	"zIndex": "80",
-	"opacity": "0.5"
-},
+
 ".fields": {
 	"backgroundColor": "white",
 	"top": "40",
 	"left": "5",
 	"right": "5",
-	"height": "80",
+	"height": "60",
 	"zIndex": "85"
 },
 "#list": {
-	"top": "120",
+	"top": "100",
 	"editing": "false"
 },
 ".item[platform=ios]": {
@@ -113,7 +102,7 @@
 "#textField": {
 	"borderStyle": Ti.UI.INPUT_BORDERSTYLE_ROUNDED,
 	"color": "#336699",
-	"top": "10",
+	"top": "0",
 	"left": "6",
 	"right": "60",
 	"height": "60"
