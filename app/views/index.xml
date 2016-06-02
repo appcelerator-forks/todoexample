@@ -3,7 +3,13 @@
         <View class="main" id="main">
             <Label class="h1">Reminders</Label>
             <Button class="edit" id="edit" onClick="editList" platform="ios">edit</Button>
-            <ListView defaultItemTemplate="basic" id="list" onPull="doPull">
+            <View class="fields" id="fields">
+                <TextField id="textField" onChange="onTextFieldChange">
+                    <AttributedHintText id="passwordHintText"/>
+                </TextField>
+                <Button class="okbutton" id="okbutton" onClick="onOkClick"/>
+            </View>
+            <ListView defaultItemTemplate="basic" id="list" >
                 <Templates>
                     <ItemTemplate name="basic">
                         <Label bindId="icon" class="icon" id="icon"/>
@@ -14,20 +20,7 @@
                 <ListSection dataCollection="todoItems" dataFunction="updateListViewUi" dataTransform="doTransform" id="section">
                     <ListItem canEdit="{canEdit}" class="item" expanded="{expanded}" icon:backgroundColor="{bgColor}" icon:text="{iconInitial}" info:text="{title}" template="{template}" touchEnabled="true" uuid:text="{id}"/>
                 </ListSection>
-                <PullView>
-                    <View backgroundColor="black" height="50">
-                        <Label/>
-                    </View>
-                </PullView>
             </ListView>
         </View>
-        <View class="overlay" id="overlay">
-            <View class="inputForm" id="inputForm"/>
-            <View class="fields" id="fields">
-                <TextField id="textField" onChange="onTextFieldChange"/>
-                <Button class="okbutton" id="okbutton" onClick="onOkClick"/>
-            </View>
-        </View>
-        <Button class="button" id="button" onClick="onClick"/>
     </Window>
 </Alloy>

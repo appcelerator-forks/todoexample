@@ -23,10 +23,8 @@ function editList() {
     $.list.editing = editable;
     if (editable) {
         $.edit.title = "done";
-        $.button.hide();
     } else {
         $.edit.title = "edit";
-        $.button.show();
     }
 }
 
@@ -57,23 +55,9 @@ function onOkClick() {
         todoText : $.textField.value
     });
     newItem.save();
-    $.textField.value="";
-    $.button.title = "";
-    $.overlay.hide();
+    $.textField.value = "";
+    $.okbutton.hide();
     updateUi();
-}
-
-function onClick() {
-    "use strict";
-    overlayOpen = !overlayOpen;
-    //console.log("onClick: " + overlayOpen);
-    if (overlayOpen) {
-        $.button.title = "";
-        $.overlay.show();
-    } else {
-        $.button.title = "";
-        $.overlay.hide();
-    }
 }
 
 function doPull() {
