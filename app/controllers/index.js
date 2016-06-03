@@ -27,6 +27,11 @@ function editList() {
     }
 }
 
+function onNotify(e) {
+    console.log("***** onNotify");
+    console.log(JSON.stringify(e));
+}
+
 function updateUi() {
     "use strict";
     //console.log("updateUi");
@@ -58,6 +63,7 @@ function onOkClick() {
     $.textField.blur();
     $.okbutton.hide();
     $.textField.value = "";
+    $.trigger("notify", {"prop": "random string"});
 }
 
 function cleanUp() {
@@ -92,6 +98,8 @@ function deleteItem(e) {
         console.error("cannot retrieve id.  Length of view: " + length);
     }
 }
+
+$.on("notify", onNotify);
 
 $.list.addEventListener("delete", deleteItem);
 
