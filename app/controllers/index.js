@@ -13,7 +13,6 @@ function doTransform(model) {
     transform.canEdit = true;
     transform.expanded = false;
     return transform;
-
 }
 
 function editList() {
@@ -39,15 +38,6 @@ function updateUi() {
     updateListViewUi();
 }
 
-function onTextFieldChange() {
-    "use strict";
-    if ($.textField.value.length > 1) {
-        $.okbutton.show();
-    } else {
-        $.okbutton.hide();
-    }
-}
-
 function onOkClick() {
     "use strict";
     var newItem,
@@ -61,7 +51,6 @@ function onOkClick() {
         updateUi();
     }
     $.textField.blur();
-    $.okbutton.hide();
     $.textField.value = "";
     $.trigger("notify", {"prop": "random string"});
 }
@@ -78,11 +67,9 @@ function deleteItem(e) {
         model,
         length;
     e = e || {};
-    console.log("**** delete listener");
     length = $.list.sections[e.sectionIndex].items.length;
     section = $.list.sections[e.sectionIndex];
     item = section.getItemAt(e.itemIndex);
-    console.log("item: " + JSON.stringify(item));
     if (item && item.uuid && item.uuid.text) {
         console.log(JSON.stringify(item.uuid.text));
         model = Alloy.Collections.todoItems.get(item.uuid.text);
@@ -94,8 +81,6 @@ function deleteItem(e) {
             console.error("cannot delete model");
         }
 
-    } else {
-        console.error("cannot retrieve id.  Length of view: " + length);
     }
 }
 

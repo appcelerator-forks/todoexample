@@ -7,7 +7,7 @@
 	"color": "#000"
 },
 ".edit": {
-	"top": "15",
+	"top": "20",
 	"right": "15",
 	"width": "50"
 },
@@ -63,14 +63,14 @@
 
 ".fields": {
 	"backgroundColor": "white",
-	"top": "40",
+	"top": "50",
 	"left": "5",
 	"right": "5",
 	"height": "60",
 	"zIndex": "85"
 },
 "#list": {
-	"top": "110",
+	"top": "120",
 	"editing": "false"
 },
 ".item[platform=ios]": {
@@ -107,7 +107,7 @@
 	"color": "#336699",
 	"top": "0",
 	"left": "6",
-	"right": "60",
+	"right": "6",
 	"height": "60"
 },
 

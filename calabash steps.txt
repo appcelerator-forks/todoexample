@@ -1,0 +1,4 @@
+calabash-ios setup
+calabash-ios gen
+xcodebuild -project ToDo.xcodeproj -configuration debug -target ToDo-cal -sdk iphonesimulator
+cucumber

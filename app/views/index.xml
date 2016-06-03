@@ -4,10 +4,9 @@
             <Label class="h1">Reminders</Label>
             <Button class="edit" id="edit" onClick="editList" platform="ios">edit</Button>
             <View class="fields" id="fields">
-                <TextField id="textField" onReturn="onOkClick" onChange="onTextFieldChange">
+                <TextField id="textField" onReturn="onOkClick">
                     <AttributedHintText id="passwordHintText"/>
                 </TextField>
-                <Button class="okbutton" id="okbutton" onClick="onOkClick"/>
             </View>
             <ListView defaultItemTemplate="basic" id="list" >
                 <Templates>
