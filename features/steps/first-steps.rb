@@ -8,6 +8,6 @@ And(/^I add a reminder$/) do
     tap_keyboard_action_key
 end
 
-Then(/^the reminder list should update$/) do
+Then(/^the item is added to the list$/) do
     wait_for_element_exists("view marked: 'run Calabash test'")
 end
