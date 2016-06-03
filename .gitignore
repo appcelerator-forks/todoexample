@@ -9,3 +9,5 @@ tmp
 .settings
 Thumbs.db
 dist
+fastlane/report.xml
+fastlane/README.md
